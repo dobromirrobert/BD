@@ -125,5 +125,9 @@ public class BD {
 		}
 		
 		return rowCount;
+		
+	}
+	public Connection getDbHandle() {
+		return dbHandle;
 	}
 }
