@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import java.awt.Font;
 
-public class MeniuPrincipal {
+public class MeniuPrincipal0 {
 
 	private JFrame frame;
 
@@ -16,7 +16,7 @@ public class MeniuPrincipal {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MeniuPrincipal window = new MeniuPrincipal();
+					MeniuPrincipal0 window = new MeniuPrincipal0();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -28,7 +28,7 @@ public class MeniuPrincipal {
 	/**
 	 * Create the application.
 	 */
-	public MeniuPrincipal() {
+	public MeniuPrincipal0() {
 		initialize();
 	}
 

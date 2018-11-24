@@ -80,10 +80,27 @@ public class Login {
 				count = res.size();
 				
 				if (count == 1) {
-					JOptionPane.showMessageDialog(frame,"You are sucessfully logined","True",JOptionPane.INFORMATION_MESSAGE);
-					MeniuPrincipal meniu = new MeniuPrincipal();
-					meniu.main(null);
-					frame.setVisible(false);
+					
+					int nivel = Integer.parseInt((res.get(0))[3]);
+					if( nivel == 0) {
+						JOptionPane.showMessageDialog(frame,"You are sucessfully logined in the human resources department","True",JOptionPane.INFORMATION_MESSAGE);
+						MeniuPrincipal0 meniu = new MeniuPrincipal0();
+						meniu.main(null);
+						frame.setVisible(false);
+					}
+					else if(nivel == 1) {
+						JOptionPane.showMessageDialog(frame,"You are sucessfully logined in the economic department ","True",JOptionPane.INFORMATION_MESSAGE);
+						MeniuPrincipal1 meniu = new MeniuPrincipal1();
+						meniu.main(null);
+						frame.setVisible(false);
+					}
+					if(nivel == 2) {
+						JOptionPane.showMessageDialog(frame,"You are sucessfully logined in the medical department","True",JOptionPane.INFORMATION_MESSAGE);
+						MeniuPrincipal2 meniu = new MeniuPrincipal2();
+						meniu.main(null);
+						frame.setVisible(false);
+					}
+					
 				}
 				else if(count == 0)
 				{
