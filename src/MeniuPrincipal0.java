@@ -22,6 +22,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class MeniuPrincipal0 {
 
@@ -56,6 +57,7 @@ public class MeniuPrincipal0 {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 19));
 		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
 		frame.getContentPane().setForeground(Color.BLACK);
 		frame.setBounds(100, 100, 1262, 836);
@@ -72,7 +74,8 @@ public class MeniuPrincipal0 {
 		frame.getContentPane().add(separator);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(294, 272, 603, 327);
+		scrollPane.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		scrollPane.setBounds(396, 214, 836, 473);
 		frame.getContentPane().add(scrollPane);
 		
 		table = new JTable();
@@ -93,7 +96,12 @@ public class MeniuPrincipal0 {
 			
 			}
 		});
-		btnLoadaPanel.setBounds(368, 162, 97, 25);
+		btnLoadaPanel.setBounds(1083, 700, 97, 25);
 		frame.getContentPane().add(btnLoadaPanel);
+		
+		JLabel lblTabelAngajati = new JLabel("Tabel Angajati");
+		lblTabelAngajati.setFont(new Font("Tahoma", Font.PLAIN, 31));
+		lblTabelAngajati.setBounds(717, 98, 219, 140);
+		frame.getContentPane().add(lblTabelAngajati);
 	}
 }
