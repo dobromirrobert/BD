@@ -3,11 +3,9 @@
  */
 
 /**
- * @author manue
+ * @author Robert
  *
  */
 public class Test {
 
-	private int testulet;
-	
 }
