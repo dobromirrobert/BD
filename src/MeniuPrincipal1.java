@@ -124,8 +124,8 @@ public class MeniuPrincipal1 {
 				try {
 					String selection = (String)comboBox.getSelectedItem();
 					BD db = new BD("127.0.0.1", "3306", "policlinica", "root", "");
-					PreparedStatement stmt = db.getDbHandle().prepareStatement("SELECT nume, prenume, Venituri FROM angajat a INNER JOIN medic m ON a.id = m.angajat_id WHERE" +selection+ "=?;");
-					stmt.setString(1, textFieldSearch.getText() );
+					PreparedStatement stmt = db.getDbHandle().prepareStatement("SELECT nume, prenume, Venituri FROM angajat a INNER JOIN medic m ON a.id = m.angajat_id WHERE " +selection+ " =?;");
+					stmt.setString(1, textFieldSearch.getText());
 					ResultSet rst = stmt.executeQuery();
 					
 					table.setModel(DbUtils.resultSetToTableModel(rst));
@@ -139,7 +139,7 @@ public class MeniuPrincipal1 {
 		textFieldSearch.setColumns(10);
 		
 		comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Nume", "Prenume"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"nume", "prenume"}));
 		comboBox.setBounds(53, 151, 166, 20);
 		frame.getContentPane().add(comboBox);
 	}
